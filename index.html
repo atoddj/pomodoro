@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <title>Javascript Timer</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+    <h1 id="title">Pomodoro Time</h1>
+    <div class="row">
+      <div class="col-md-1">
+        Session: <button class="btn btn-default btn-xs" id="decreaseSession">-</button><span id="sessionLength">1</span><button class="btn btn-default btn-xs" id="increaseSession">+</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        Break:   <button class="btn btn-default btn-xs" id="decreaseBreak">-</button><span id="breakLength">1</span><button class="btn btn-default btn-xs" id="increaseBreak">+</button>
+      </div>
+    </div>
+    <h2 id="timer"></h2>
+    <button class="btn btn-primary" id="startPause" onclick="startPause()">Start</button>
+    <button class="btn btn-info" id="reset" onclick="restart()">Reset</button>
+  </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="timer.js"></script>
+  </body>
+</html>
