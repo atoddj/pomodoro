@@ -6,6 +6,4 @@ The idea of the pomodoro cycle is to convince yourself to be productive with the
 I have this set to loop infinitely.
 
 Todo: 
-* Style the page
-* Add description to page
 * Add notifications for browsers
