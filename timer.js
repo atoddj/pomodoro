@@ -5,13 +5,16 @@ var sessionLength = Number(document.getElementById("sessionLength").innerHTML);
 var breakLength = Number(document.getElementById("breakLength").innerHTML);
 var sessionTime=sessionLength*60*10;
 var breakTime=breakLength*60*10;
+var time = sessionTime;
 
-
+$("#timer").html(sessionLength);
 
 $("#increaseSession").click(function(){
 	sessionLength++;
 	sessionTime = sessionLength*60*10;
 	$("#sessionLength").html(sessionLength);
+	$("#timer").html(sessionLength);
+	time = sessionTime;
 });
 $("#increaseBreak").click(function(){
 	breakLength++;
@@ -22,6 +25,8 @@ $("#decreaseSession").click(function(){
 	if (sessionLength>1)sessionLength--;
 	sessionTime = sessionLength*60*10;
 	$("#sessionLength").html(sessionLength);
+	$("#timer").html(sessionLength);
+	time = sessionTime;
 });
 $("#decreaseBreak").click(function(){
 	if (breakLength>1) breakLength--;
@@ -29,8 +34,6 @@ $("#decreaseBreak").click(function(){
 	$("#breakLength").html(breakLength);
 });
 
-var time = sessionTime;
-document.getElementById("timer").innerHTML = time/10/60 + ":0" + (time/10)%60;
 
 function startPause(){
 	if (running == 0) {
@@ -46,7 +49,7 @@ function startPause(){
 function restart() {
 	$("#title").html("Pomodoro Time");
 	running = 0;
-	time = Number($("#breakLength").text())*10*60;
+	time = Number($("#sessionLength").text())*10*60;
 	$("#startPause").html("Start");
 }
 
